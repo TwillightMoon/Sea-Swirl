@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f686860d3172024388189ee74c602a3, type: 3}
+  m_Name: ShaderWaterSettings
+  m_EditorClassIdentifier: 
+  _phase: 1
+  _gravity: 9
+  _waveDepth: 1
+  _waveApmlitude: {x: 0.02, y: 0.2, z: 0.55, w: 0.37}
+  _timeScale: {x: 5, y: 25, z: 10, w: 50}
+  _direction1: {x: 0.55, y: 0, z: 0}
+  _direction2: {x: 1, y: 0, z: -1}
+  _direction3: {x: 0, y: 0.25, z: 0.5}
+  _direction4: {x: 1, y: 0, z: -1}
