@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeef8d85de8db242bdda70cc7ff5acd, type: 3}
   m_Name: OculusTouchControllerProfile Standalone
   m_EditorClassIdentifier: 
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Oculus Touch Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.oculustouch
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeef8d85de8db242bdda70cc7ff5acd, type: 3}
   m_Name: OculusTouchControllerProfile Android
   m_EditorClassIdentifier: 
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Oculus Touch Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.oculustouch
@@ -836,25 +836,25 @@ MonoBehaviour:
   m_Name: Standalone
   m_EditorClassIdentifier: 
   features:
-  - {fileID: -9134800422777558262}
-  - {fileID: -6523278371343329061}
   - {fileID: 4119675936315120107}
-  - {fileID: 4964078003288174988}
   - {fileID: -1396348835838346218}
+  - {fileID: 4964078003288174988}
+  - {fileID: -4378622886915450924}
   - {fileID: 452611762665826128}
+  - {fileID: -5286005878033686074}
+  - {fileID: -5199367959993249799}
+  - {fileID: -4391642106847299587}
+  - {fileID: 4995783616470402417}
+  - {fileID: 4184290483893561106}
+  - {fileID: -259867819908398927}
   - {fileID: -6100641338037024518}
   - {fileID: -2084643593605791061}
-  - {fileID: -5199367959993249799}
-  - {fileID: 6610341073754694322}
-  - {fileID: 4995783616470402417}
-  - {fileID: -5286005878033686074}
+  - {fileID: -6523278371343329061}
   - {fileID: -3201623319222169798}
-  - {fileID: -259867819908398927}
-  - {fileID: 4184290483893561106}
   - {fileID: -2665233222823345869}
+  - {fileID: -9134800422777558262}
+  - {fileID: 6610341073754694322}
   - {fileID: -2559456945845136101}
-  - {fileID: -4391642106847299587}
-  - {fileID: -4378622886915450924}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
@@ -877,23 +877,23 @@ MonoBehaviour:
   m_Name: Android
   m_EditorClassIdentifier: 
   features:
-  - {fileID: 3581482213933548439}
-  - {fileID: 3109340794084832590}
-  - {fileID: -7155911101453850950}
-  - {fileID: -3906339651274334006}
   - {fileID: -6744984496682439525}
-  - {fileID: -7841992574755787334}
   - {fileID: -9114848666155529629}
-  - {fileID: -7025477907688446951}
-  - {fileID: -6053502605085039547}
-  - {fileID: 2191936556484509033}
-  - {fileID: 933578075803018843}
-  - {fileID: -2946404486575970224}
-  - {fileID: 8954554356635553908}
-  - {fileID: 4548684398204661430}
-  - {fileID: 1889047854065050782}
-  - {fileID: 1506087174750184089}
+  - {fileID: -7841992574755787334}
   - {fileID: 2824012535032793894}
+  - {fileID: -7025477907688446951}
+  - {fileID: 933578075803018843}
+  - {fileID: 2191936556484509033}
+  - {fileID: -3906339651274334006}
+  - {fileID: 4548684398204661430}
+  - {fileID: 8954554356635553908}
+  - {fileID: -6053502605085039547}
+  - {fileID: -7155911101453850950}
+  - {fileID: 3109340794084832590}
+  - {fileID: -2946404486575970224}
+  - {fileID: 1889047854065050782}
+  - {fileID: 3581482213933548439}
+  - {fileID: 1506087174750184089}
   m_renderMode: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
