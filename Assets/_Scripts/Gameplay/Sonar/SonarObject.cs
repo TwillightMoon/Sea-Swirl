@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class SonarObject : MonoBehaviour
 {
-    public static Action<SonarObject> OnSonarObjectSpawn { get; set; }
+    [SerializeField] private Color color;
+
+    public static Action<SonarObject, Color> OnSonarObjectSpawn { get; set; }
 
     public Action OnSonarObjectDestroy { get; set; }
 
     private void Start()
     {
-        OnSonarObjectSpawn?.Invoke(this);
+        OnSonarObjectSpawn?.Invoke(this, color);
     }
 
     private void OnDestroy()

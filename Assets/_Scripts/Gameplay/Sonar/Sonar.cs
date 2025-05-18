@@ -17,7 +17,7 @@ public class Sonar : MonoBehaviour
         SonarObject.OnSonarObjectSpawn -= AddNewPoint;
     }
 
-    private void AddNewPoint(SonarObject obj)
+    private void AddNewPoint(SonarObject obj, Color color)
     {
         objects.Add(obj);
 
@@ -25,6 +25,7 @@ public class Sonar : MonoBehaviour
 
         sonarPoint.SonarPointPosition = obj.transform;
         sonarPoint.OriginPosition = transform;
+        sonarPoint.Color = color;
         obj.OnSonarObjectDestroy += sonarPoint.OnPointDestroy;
     }
 }

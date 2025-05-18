@@ -5,6 +5,7 @@ public class SonarPoint : MonoBehaviour
     [SerializeField] private float posMultiplier;
     public Transform SonarPointPosition { get; set; }
     public Transform OriginPosition { get; set; }
+    public Color Color { get; set; }
 
     private void Update()
     {
