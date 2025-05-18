@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Sonar : MonoBehaviour
 {
     [SerializeField] private SonarPoint sonarPointPrefab;
+    [SerializeField] private TextMeshProUGUI depthText;
 
     private List<SonarObject> objects = new List<SonarObject>();
 
@@ -27,5 +29,10 @@ public class Sonar : MonoBehaviour
         sonarPoint.OriginPosition = transform;
         sonarPoint.Color = color;
         obj.OnSonarObjectDestroy += sonarPoint.OnPointDestroy;
+    }
+
+    private void Update()
+    {
+        depthText.text = "Depth: " + ProjMath.Depth(transform).ToString();
     }
 }

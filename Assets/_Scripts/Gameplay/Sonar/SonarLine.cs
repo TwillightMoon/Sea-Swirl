@@ -9,8 +9,9 @@ public class SonarLine : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.TryGetComponent(out SonarPoint point)) return;
-        Instantiate(radarPoint, collision.transform.position, collision.transform.rotation).TryGetComponent(out SpriteRenderer spr);
-        spr.color = point.Color;
+        GameObject obj = Instantiate(radarPoint, collision.transform.position, collision.transform.rotation);
+        obj.GetComponent<SpriteRenderer>().color = point.Color;
+        obj.GetComponent<SonarExpiringDot>().OriginalPoint = point.SonarPointPosition;
     }
 
     private void Update()

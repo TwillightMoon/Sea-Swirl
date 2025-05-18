@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ProjMath : MonoBehaviour
 {
@@ -75,5 +75,12 @@ public class ProjMath : MonoBehaviour
     {
         if (!canBeNegative) return Mathf.Sin(Time.timeSinceLevelLoad * m) * (Mathf.Sin(Time.timeSinceLevelLoad * m) > 0 ? 1f : -1f);
         else return Mathf.Sin(Time.timeSinceLevelLoad * m);
+    }
+
+    public static float Depth(Transform transform) //Формула для подсчета глубины
+    {
+        float depth = Mathf.Abs(Mathf.Round(-transform.position.y));
+        if (transform.position.y > 0f) depth = 0f;
+        return depth;
     }
 }
