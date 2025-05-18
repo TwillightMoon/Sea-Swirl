@@ -6,8 +6,11 @@ public class Sonar : MonoBehaviour
 {
     [SerializeField] private SonarPoint sonarPointPrefab;
     [SerializeField] private TextMeshProUGUI depthText;
+    [SerializeField] private string endScene = "End";
+    [SerializeField] private SceneSwitcher sceneSwitcher;
 
     private List<SonarObject> objects = new List<SonarObject>();
+    private List<DestroyableObject> destroyableObjects = new List<DestroyableObject>(); 
 
     private void Awake()
     {
@@ -22,6 +25,7 @@ public class Sonar : MonoBehaviour
     private void AddNewPoint(SonarObject obj, Color color)
     {
         objects.Add(obj);
+        if (obj.gameObject.TryGetComponent(out DestroyableObject desObj)) destroyableObjects.Add(desObj);
 
         Instantiate(sonarPointPrefab, transform).TryGetComponent(out SonarPoint sonarPoint);
 
@@ -34,5 +38,19 @@ public class Sonar : MonoBehaviour
     private void Update()
     {
         depthText.text = "Depth: " + ProjMath.Depth(transform).ToString();
+
+        int cnt = destroyableObjects.Count;
+        foreach (DestroyableObject desObj in destroyableObjects)
+        {
+            if (desObj == null) cnt--;
+        }
+
+        if (cnt <= 0)
+        {
+            enabled = false;
+            sceneSwitcher.ChangeScene(endScene);
+        }
+
+        Debug.Log(cnt);
     }
 }

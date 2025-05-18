@@ -9,6 +9,7 @@ public class SonarPoint : MonoBehaviour
 
     private void Update()
     {
+        if (SonarPointPosition == null) return;
         transform.localPosition = new Vector3(SonarPointPosition.position.x - OriginPosition.position.x,
             SonarPointPosition.position.z - OriginPosition.position.z, 0f) * posMultiplier; 
     }

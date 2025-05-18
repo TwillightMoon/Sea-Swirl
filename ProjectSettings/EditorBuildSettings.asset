@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WaterSimTest.unity
     guid: 7a13a3c6a4926a84992c4e4ebbdde8db
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: 61f6128814f81dc419a5c5c8d96744a0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 075d511d0dfdf254194d9c2199c49e16, type: 2}
