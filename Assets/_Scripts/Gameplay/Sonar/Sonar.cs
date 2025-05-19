@@ -6,6 +6,7 @@ public class Sonar : MonoBehaviour
 {
     [SerializeField] private SonarPoint sonarPointPrefab;
     [SerializeField] private TextMeshProUGUI depthText;
+    [SerializeField] private TextMeshProUGUI targetsText;
     [SerializeField] private string endScene = "End";
     [SerializeField] private SceneSwitcher sceneSwitcher;
 
@@ -42,7 +43,10 @@ public class Sonar : MonoBehaviour
         int cnt = destroyableObjects.Count;
         foreach (DestroyableObject desObj in destroyableObjects)
         {
-            if (desObj == null) cnt--;
+            if (desObj == null)
+            {
+                cnt -= 1;
+            }
         }
 
         if (cnt <= 0)
@@ -51,6 +55,6 @@ public class Sonar : MonoBehaviour
             sceneSwitcher.ChangeScene(endScene);
         }
 
-        Debug.Log(cnt);
+        targetsText.text = "Targets left: " + cnt.ToString();
     }
 }
