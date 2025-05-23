@@ -1094,13 +1094,45 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1240598450}
-    - target: {fileID: 5302301043044218907, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
-      propertyPath: m_MaxAngle
-      value: 130
+    - target: {fileID: 4216291413355705955, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
+      propertyPath: m_OnLeverValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeFirstBallastWeight
       objectReference: {fileID: 0}
-    - target: {fileID: 5302301043044218907, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
-      propertyPath: m_MinAngle
-      value: -130
+    - target: {fileID: 5964742282739049046, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.703
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964742282739049046, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.491
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033184362897676896, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4287722
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033184362897676896, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
+      propertyPath: m_Size.y
+      value: 0.062539816
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033184362897676896, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
+      propertyPath: m_Size.z
+      value: 5.781945
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033184362897676896, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
+      propertyPath: m_Center.x
+      value: -0.03150882
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033184362897676896, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
+      propertyPath: m_Center.y
+      value: 0.4687301
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033184362897676896, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
+      propertyPath: m_Center.z
+      value: 2.3909726
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758423560870210902, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
+      propertyPath: _maxWeightOfBallasts
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7204018596522086655, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
       propertyPath: sceneSwitcher
@@ -1110,6 +1142,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1240598450}
+    - target: {fileID: 8586184794130673692, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
+      propertyPath: m_OnLeverValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeSecondBallastWeight
+      objectReference: {fileID: 0}
     - target: {fileID: 8588152614407222774, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
       propertyPath: sceneSwitcher
       value: 
