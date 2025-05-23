@@ -19,6 +19,7 @@ public class MenuManager : MonoBehaviour
 
     public void StartGame()
     {
+        print("StartGame");
         sceneSwitcher.ChangeScene(nextScene);
     }
 
