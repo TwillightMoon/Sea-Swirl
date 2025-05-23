@@ -1052,7 +1052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2074591926201098372, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.161301
+      value: -2.48
       objectReference: {fileID: 0}
     - target: {fileID: 2074591926201098372, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1094,6 +1094,14 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1240598450}
+    - target: {fileID: 5302301043044218907, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
+      propertyPath: m_MaxAngle
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 5302301043044218907, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
+      propertyPath: m_MinAngle
+      value: -130
+      objectReference: {fileID: 0}
     - target: {fileID: 7204018596522086655, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
       propertyPath: sceneSwitcher
       value: 
