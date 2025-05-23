@@ -16,7 +16,9 @@ public class SubmarineController : MonoBehaviour
     private Floater _floater;
     
     private Vector2 _currentDirection;
-    private float _depthDelta;
+
+    private float _firstDelta;
+    private float _secondDelta;
 
     private void OnValidate()
     {
@@ -26,7 +28,7 @@ public class SubmarineController : MonoBehaviour
 
     public void SetMoveDirection(Vector2 direction) => _currentDirection = direction;
 
-    public void SetDepth(float depthDelta) => _depthDelta = depthDelta;
+    
     
     private void Start()
     {
@@ -35,7 +37,10 @@ public class SubmarineController : MonoBehaviour
     
     private void FixedUpdate()
     {
-        _model.ChangeTargetDepth(_depthDelta);
+        _model.FillFirstBallast(_firstDelta);
+        _model.FillSecondBallast(_secondDelta);
+        
+        _model.ChangeTargetDepth();
         _floater.Float(_model.DepthBeforeSubmerged);
         MoveSubmarine();
     }
@@ -65,6 +70,9 @@ public class SubmarineController : MonoBehaviour
         print(coeff);
         _currentDirection.x = _model.Speed * coeff * Time.fixedDeltaTime;
     }
+    
+    public void ChangeFirstBallastWeight(float delta) => _firstDelta = delta;
+    public void ChangeSecondBallastWeight(float delta) => _secondDelta = delta;
 
     private void OnDrawGizmos()
     {
