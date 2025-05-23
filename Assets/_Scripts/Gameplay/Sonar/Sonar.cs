@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sonar : MonoBehaviour
 {
+    [SerializeField] private Transform origin;
     [SerializeField] private SonarPoint sonarPointPrefab;
     [SerializeField] private TextMeshProUGUI targetsText;
     [SerializeField] private string endScene = "End";
@@ -34,7 +35,7 @@ public class Sonar : MonoBehaviour
         Instantiate(sonarPointPrefab, transform).TryGetComponent(out SonarPoint sonarPoint);
 
         sonarPoint.SonarPointPosition = obj.transform;
-        sonarPoint.OriginPosition = transform;
+        sonarPoint.OriginPosition = origin;
         sonarPoint.Color = color;
         obj.OnSonarObjectDestroy += sonarPoint.OnPointDestroy;
     }
