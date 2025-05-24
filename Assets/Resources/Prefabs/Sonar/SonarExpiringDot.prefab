@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spr: {fileID: 4712538870410453036}
   text: {fileID: 2291184052997692813}
-  dissapearSpeed: 0.5
+  dissapearSpeed: 0.75
   destroyAlpha: 0.01
 --- !u!1 &6444511290997460717
 GameObject:

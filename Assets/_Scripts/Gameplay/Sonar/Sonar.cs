@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Sonar : MonoBehaviour
 {
+    [SerializeField] private Transform origin;
     [SerializeField] private SonarPoint sonarPointPrefab;
-    [SerializeField] private TextMeshProUGUI depthText;
     [SerializeField] private TextMeshProUGUI targetsText;
     [SerializeField] private string endScene = "End";
     [SerializeField] private SceneSwitcher sceneSwitcher;
+
+    [SerializeField] private Transform depthLine;
+    [SerializeField] private float depthLineRotationOffset;
+    [SerializeField] private float maxDepth = 100f;
 
     private List<SonarObject> objects = new List<SonarObject>();
     private List<DestroyableObject> destroyableObjects = new List<DestroyableObject>(); 
@@ -31,14 +35,14 @@ public class Sonar : MonoBehaviour
         Instantiate(sonarPointPrefab, transform).TryGetComponent(out SonarPoint sonarPoint);
 
         sonarPoint.SonarPointPosition = obj.transform;
-        sonarPoint.OriginPosition = transform;
+        sonarPoint.OriginPosition = origin;
         sonarPoint.Color = color;
         obj.OnSonarObjectDestroy += sonarPoint.OnPointDestroy;
     }
 
     private void Update()
     {
-        depthText.text = "Depth: " + ProjMath.Depth(transform).ToString();
+        depthLine.localEulerAngles = new Vector3(depthLine.localEulerAngles.x, 360f - 360f / maxDepth * ProjMath.Depth(origin) + depthLineRotationOffset, depthLine.localEulerAngles.z);
 
         int cnt = destroyableObjects.Count;
         foreach (DestroyableObject desObj in destroyableObjects)

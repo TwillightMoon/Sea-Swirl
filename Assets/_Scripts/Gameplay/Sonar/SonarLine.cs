@@ -5,11 +5,12 @@ public class SonarLine : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private Transform rotatePoint;
     [SerializeField] private GameObject radarPoint;
+    [SerializeField] private Transform sonar;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.TryGetComponent(out SonarPoint point)) return;
-        GameObject obj = Instantiate(radarPoint, collision.transform.position, collision.transform.rotation);
+        GameObject obj = Instantiate(radarPoint, collision.transform.position, collision.transform.rotation, sonar);
         obj.GetComponent<SpriteRenderer>().color = point.Color;
         obj.GetComponent<SonarExpiringDot>().OriginalPoint = point.SonarPointPosition;
     }
