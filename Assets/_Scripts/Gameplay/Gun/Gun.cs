@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
@@ -17,10 +18,5 @@ public class Gun : MonoBehaviour
     public void LoadAmmo(int count = 1)
     {
         ammo += count;
-    }
-
-    private void Update() //Ради теста влепил
-    {
-        if (Input.GetKeyDown(KeyCode.Space)) Shoot();
     }
 }

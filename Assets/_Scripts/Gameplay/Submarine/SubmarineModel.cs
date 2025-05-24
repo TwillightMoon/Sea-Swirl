@@ -24,7 +24,7 @@ public class SubmarineModel : MonoBehaviour
     private float _depthStep = 0.1F;
     
     [Header("Ballast")]
-    [SerializeField, Range(0.25F, 1.5F)]
+    [SerializeField, Range(0.25F, 10.0F)]
     private float _maxWeightOfBallasts = 0.2F;
     
     private float _minWeightOfBallast = 0.0F;

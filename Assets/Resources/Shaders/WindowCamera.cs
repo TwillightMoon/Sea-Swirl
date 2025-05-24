@@ -7,6 +7,6 @@ public class WindowCamera : MonoBehaviour
 
     private void Update()
     {
-        transform.rotation = otherCam.rotation;
+        //transform.rotation = otherCam.rotation;
     }
 }
