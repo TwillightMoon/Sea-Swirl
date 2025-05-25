@@ -10,6 +10,10 @@ public class PayloadSystem : MonoBehaviour
     
     private bool _isLoaded = false;
     public bool isClosed = false;
+
+    [SerializeField] private Light l;
+    [SerializeField] private Color loadedColor = Color.green;
+    [SerializeField] private Color notLoadedColor = Color.red;
     
     private void HideTorpedoesPreview()
     {
@@ -38,5 +42,10 @@ public class PayloadSystem : MonoBehaviour
         
         _gun.LoadAmmo();
         _isLoaded = true;
+    }
+
+    private void Update()
+    {
+        l.color = _isLoaded ? loadedColor : notLoadedColor;
     }
 }
