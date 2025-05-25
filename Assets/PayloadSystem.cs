@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PayloadSystem : MonoBehaviour
 {
@@ -9,6 +9,7 @@ public class PayloadSystem : MonoBehaviour
     private GameObject _torpedoesPreview;
     
     private bool _isLoaded = false;
+    public bool isClosed = false;
     
     private void HideTorpedoesPreview()
     {
@@ -17,21 +18,25 @@ public class PayloadSystem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(!other.TryGetComponent(out TorpedoBlank blank)) return;
+        if(other.TryGetComponent(out TorpedoBlank blank))
+            TorpedoProcessing(blank);
+    }
+    
+    public void Shoot()
+    {
+        if(!_isLoaded || !isClosed) return;
+        _isLoaded = false;
         
-        blank.ResetPos();
+        _gun.Shoot();
+        HideTorpedoesPreview();
+    }
+
+    private void TorpedoProcessing(TorpedoBlank torpedo)
+    {
+        torpedo.ResetPos();
         _torpedoesPreview.SetActive(true);
         
         _gun.LoadAmmo();
         _isLoaded = true;
-    }
-
-    public void Shoot()
-    {
-        if(!_isLoaded) return;
-        _isLoaded = true;
-        
-        _gun.Shoot();
-        HideTorpedoesPreview();
     }
 }
