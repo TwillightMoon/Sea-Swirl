@@ -42,7 +42,7 @@ public class Sonar : MonoBehaviour
 
     private void Update()
     {
-        depthLine.localEulerAngles = new Vector3(depthLine.localEulerAngles.x, 360f - 360f / maxDepth * ProjMath.Depth(origin) + depthLineRotationOffset, depthLine.localEulerAngles.z);
+        depthLine.localEulerAngles = new Vector3(depthLine.localEulerAngles.x, depthLine.localEulerAngles.y, 360f / maxDepth * ProjMath.Depth(origin) + depthLineRotationOffset);
 
         int cnt = destroyableObjects.Count;
         foreach (DestroyableObject desObj in destroyableObjects)
