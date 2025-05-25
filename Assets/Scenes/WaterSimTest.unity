@@ -6167,10 +6167,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene Switcher Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 5023171482990087656, guid: c5039b5c1a6d55a488a3d5f21b4a6c6b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6395625789781240213, guid: c5039b5c1a6d55a488a3d5f21b4a6c6b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
