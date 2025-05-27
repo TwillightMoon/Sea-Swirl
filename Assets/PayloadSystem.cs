@@ -30,6 +30,7 @@ public class PayloadSystem : MonoBehaviour
     {
         if(!_isLoaded || !isClosed) return;
         _isLoaded = false;
+        l.color = notLoadedColor;
         
         _gun.Shoot();
         HideTorpedoesPreview();
@@ -42,10 +43,6 @@ public class PayloadSystem : MonoBehaviour
         
         _gun.LoadAmmo();
         _isLoaded = true;
-    }
-
-    private void Update()
-    {
-        l.color = _isLoaded ? loadedColor : notLoadedColor;
+        l.color = loadedColor;
     }
 }

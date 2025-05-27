@@ -5291,6 +5291,10 @@ PrefabInstance:
       value: GunR
       objectReference: {fileID: 0}
     - target: {fileID: 6758423560870210902, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
+      propertyPath: _depthStep
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758423560870210902, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
       propertyPath: _maxWeightOfBallasts
       value: 3
       objectReference: {fileID: 0}
@@ -9725,6 +9729,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -14.605
       objectReference: {fileID: 0}
+    - target: {fileID: -5466280587479300185, guid: 3e58d95557c712440a0c16c492d468da, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -1076622865230832474, guid: 3e58d95557c712440a0c16c492d468da, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -9733,10 +9741,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: submarine 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2225158742452662913, guid: 3e58d95557c712440a0c16c492d468da, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684991429827676534, guid: 3e58d95557c712440a0c16c492d468da, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4457247318975670611, guid: 3e58d95557c712440a0c16c492d468da, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 44f1f4dd9a358ea4aa5de2cb54c6f931, type: 2}
+    - target: {fileID: 5339408507114889607, guid: 3e58d95557c712440a0c16c492d468da, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165788127930183896, guid: 3e58d95557c712440a0c16c492d468da, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -5806212077566095057, guid: 3e58d95557c712440a0c16c492d468da, type: 3}
