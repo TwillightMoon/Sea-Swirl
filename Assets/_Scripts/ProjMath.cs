@@ -2,6 +2,8 @@
 
 public class ProjMath : MonoBehaviour
 {
+    //Здесь есть вся математика проекта
+
     public static float EaseOutBounce(float x)
     {
         float n1 = 7.5625f;
@@ -55,23 +57,12 @@ public class ProjMath : MonoBehaviour
             : (1 + EaseOutBounce(2 * x - 1)) / 2;
     }
 
-    public static float EaseOutQuint(float x)
-    {
-        return 1 - Mathf.Pow(1 - x, 5);
-    }
-
-    public static float RotateTowardsPosition(float x, float y, float targetX, float targetY)
-    {
-        Vector3 diference = new Vector2(x, y) - new Vector2(targetX, targetY);
-        return Mathf.Atan2(diference.y, diference.x) * Mathf.Rad2Deg;
-    }
-
-    public static void MoveTowardsAngleXZ(Transform pos, float angle, float speed)
+    public static void MoveTowardsAngleXZ(Transform pos, float angle, float speed) //Движение определенного объекта по координатам X и Z под определенным углом
     {
         pos.position += new Vector3(Mathf.Sin(angle * Mathf.Deg2Rad), 0f, Mathf.Cos(angle * Mathf.Deg2Rad)) * speed;
     }
 
-    public static float SinTime(float m = 1f, bool canBeNegative = false)
+    public static float SinTime(float m = 1f, bool canBeNegative = false) //Формула синуса времени
     {
         if (!canBeNegative) return Mathf.Sin(Time.timeSinceLevelLoad * m) * (Mathf.Sin(Time.timeSinceLevelLoad * m) > 0 ? 1f : -1f);
         else return Mathf.Sin(Time.timeSinceLevelLoad * m);

@@ -1,7 +1,9 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    //Здесь расписана логика, отвечающая за летающую пулю
+
     [SerializeField] private float speed;
     [SerializeField] private Rigidbody rg;
     [SerializeField] private float damage;

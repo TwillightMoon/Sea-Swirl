@@ -1,13 +1,15 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SonarLine : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    [SerializeField] private Transform rotatePoint;
-    [SerializeField] private GameObject radarPoint;
-    [SerializeField] private Transform sonar;
+    //Здесь расписана логика сонарной линии
 
-    private void OnTriggerEnter(Collider collision)
+    [SerializeField] private float speed;           //Скорость линии
+    [SerializeField] private Transform rotatePoint; //Сам объект, который нужно крутить
+    [SerializeField] private GameObject radarPoint; //Префаб временной точки, которая будет заспавнена когда линия каснется точки
+    [SerializeField] private Transform sonar;       //Сам сонар
+
+    private void OnTriggerEnter(Collider collision) //Тут при коллизии с точкой спавнится временная точка
     {
         if (!collision.TryGetComponent(out SonarPoint point)) return;
         GameObject obj = Instantiate(radarPoint, collision.transform.position, collision.transform.rotation, sonar);
@@ -17,6 +19,6 @@ public class SonarLine : MonoBehaviour
 
     private void Update()
     {
-        rotatePoint.eulerAngles += new Vector3(0, 0, 1) * speed * Time.deltaTime;
+        rotatePoint.eulerAngles += new Vector3(0, 0, 1) * speed * Time.deltaTime; //Само кручение линии
     }
 }
