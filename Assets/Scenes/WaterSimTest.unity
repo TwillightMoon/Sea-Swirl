@@ -5378,11 +5378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758423560870210902, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
       propertyPath: _depthStep
-      value: 0.25
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6758423560870210902, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
       propertyPath: _maxWeightOfBallasts
-      value: 6
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 7204018596522086655, guid: 2b567f4fe4e96a044ab3a8a27760f204, type: 3}
       propertyPath: sceneSwitcher
@@ -9741,7 +9741,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1634496217
 Transform:
   m_ObjectHideFlags: 0
