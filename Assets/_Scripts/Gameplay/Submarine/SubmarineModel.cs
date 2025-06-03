@@ -24,12 +24,14 @@ public class SubmarineModel : MonoBehaviour
     private float _depthStep = 0.1F;
     
     [Header("Ballast")]
-    [SerializeField, Range(0.25F, 100.0F)]
+    [SerializeField, Range(0.25F, 200.0F)]
     private float _maxWeightOfBallasts = 0.2F;
     
     private float _minWeightOfBallast = 0.0F;
 
+    [SerializeField, Min(0F)]
     private float _weightOfFirstBallast;
+    [SerializeField, Min(0F)]
     private float _weightOfSecondBallast;
     
     public Transform CenterOfMass => _centerOfMass;
