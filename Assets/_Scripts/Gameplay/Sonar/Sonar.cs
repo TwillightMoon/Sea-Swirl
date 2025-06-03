@@ -14,6 +14,9 @@ public class Sonar : MonoBehaviour
     [SerializeField] private float depthLineRotationOffset;
     [SerializeField] private float maxDepth = 100f;
 
+    [SerializeField] private Transform rotateSprite;
+    [SerializeField] private float rotateSpriteOffset;
+
     private List<SonarObject> objects = new List<SonarObject>();
     private List<DestroyableObject> destroyableObjects = new List<DestroyableObject>(); 
 
@@ -42,6 +45,7 @@ public class Sonar : MonoBehaviour
 
     private void Update()
     {
+        rotateSprite.localEulerAngles = new Vector3(rotateSprite.localEulerAngles.x, rotateSprite.localEulerAngles.y, origin.eulerAngles.y);
         depthLine.localEulerAngles = new Vector3(depthLine.localEulerAngles.x, depthLine.localEulerAngles.y, 360f / maxDepth * ProjMath.Depth(origin) + depthLineRotationOffset);
 
         int cnt = destroyableObjects.Count;
